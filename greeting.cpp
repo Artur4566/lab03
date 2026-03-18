@@ -1,12 +1,16 @@
 #include <iostream>
 #include <string>
-using namespace std;
 
 int main()
 {
-    string username;
-    cout << "Введите ваше имя: ";
-    cin >> username;
-    cout << "Привет, " << username << "!" << endl;
+    // Переменная для хранения имени пользователя
+    std::string username;
+    
+    // Запрос имени у пользователя
+    std::cout << "Введите ваше имя: ";
+    std::cin >> username;
+    
+    // Вывод приветствия
+    std::cout << "Привет, " << username << "!" << std::endl;
     return 0;
 }
