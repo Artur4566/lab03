@@ -1,0 +1,20 @@
+# Игнорировать директории сборки
+build/
+*-build/
+*/build/*
+
+# Игнорировать временные файлы
+*.tmp
+*.log
+*.cache
+*.swp
+*.swo
+
+# Игнорировать файлы IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Игнорировать файлы ОС
+.DS_Store
+Thumbs.db
