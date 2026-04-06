@@ -41,7 +41,7 @@ cmake --build _build --target install
 ./_install/bin/example2
 ```
 
-## 🎯 Цель лабораторной работы
+##  Цель лабораторной работы
 
 Освоение системы автоматизации сборки CMake:
 - Создание CMakeLists.txt
