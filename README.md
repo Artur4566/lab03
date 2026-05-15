@@ -1,52 +1,25 @@
 # Лабораторная работа №3
-## Системы автоматизации сборки проекта на примере CMake
+## CMake
 
-**Автор:** Кешишоглян Артур  
-**Дата:** Апрель 2026
+**Автор:** Кешишоглян Артур
 
-##  Описание проекта
-Данный проект демонстрирует использование CMake для автоматизации сборки C++ проектов.
+## Сборка
 
-##  Структура проекта
-```
-lab03/
-├── CMakeLists.txt                 # Корневой файл сборки
-├── text_lib/                      # Библиотека форматирования
-├── text_ext_lib/                  # Расширенная библиотека
-├── equation_lib/                  # Библиотека для решения уравнений
-├── greeting_app/                  # Приложение Hello World
-├── calc_app/                      # Приложение для решения уравнений
-└── examples/                      # Примеры из Tutorial
-```
+mkdir build && cd build
+cmake ..
+cmake --build .
 
-##  Сборка проекта
+## Запуск
 
-```bash
-cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-cmake --build _build --target install
-```
+./example1
+./example2
+./hello_world_application
+./solver_application 1 0 -4 0.001
 
-##  Запуск приложений
+## Структура
 
-```bash
-# Hello World
-./_install/bin/greeting_app
-
-# Решение уравнения x² - 4 = 0 (корни ±2)
-./_install/bin/calc_app 1 0 -4 0.001 -10 0
-./_install/bin/calc_app 1 0 -4 0.001 0 10
-
-# Примеры из Tutorial
-./_install/bin/example1
-./_install/bin/example2
-```
-
-##  Цель лабораторной работы
-
-Освоение системы автоматизации сборки CMake:
-- Создание CMakeLists.txt
-- Сборка библиотек и приложений
-- Управление зависимостями
-- Установка проекта
-```
-
+- formatter_lib/
+- formatter_ex_lib/
+- solver_lib/
+- hello_world_application/
+- solver_application/

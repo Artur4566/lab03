@@ -1,13 +1,8 @@
-cmake_minimum_required(VERSION 3.4)
-project(solver)
+cmake_minimum_required(VERSION 3.10)
+project(solver_application)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(solver solver.cpp)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
-
-target_link_libraries(solver formatter_ex formatter solver_lib)
+add_executable(solver_application solver.cpp)
+target_link_libraries(solver_application PRIVATE formatter_ex_lib solver_lib)
